@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Nada's projects</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+         #preloader{
+            background: white url(preloader.gif) no-repeat center center;
+            Background-size: 70%;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+         }
+        body {
+            color: #000000;
+            line-height: 1.6;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        .pp{
+            margin: 20px 0;
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+        }
+        
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+        .img1{
+            right:5.5%;
+            position: absolute;
+            margin-bottom: 3%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .img1:hover{
+            transform: scale(1.3); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            margin: 0 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-top: 2%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        nav{
+            position: sticky;
+            background-color:  rgba(255, 255, 255, 0.5);
+            width: 100%;
+            padding: 10px 0;
+            z-index: 1000;
+            text-align: center;
+            top: 0;
+        }
+        nav .menu{
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .menu .logo h1{
+            text-decoration: none;
+            color: #000000;
+            font-size: 35px;
+            font-weight: 600;
+            font-family: fantasy;
+        }
+        .menu ul{
+            display: inline-flex;
+        }
+        .menu ul li{
+            list-style: none;
+            margin-left: 7px;
+        }
+        .menu ul li:first-child{
+            margin-left: 0px;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-family: fantasy;
+        }
+        .menu ul li a:hover{
+            background-color: antiquewhite;
+
+        }
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            left:15%;
+            position: absolute;
+        }
+        a{
+            text-decoration: none;
+        }
+        th, td {
+            border: 2px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: inline-flex;
+        }
+        .footer-links li {
+            margin: 0 15px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color:blue; 
+        }
+        footer p {
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .he1{
+            
+            margin-top: 4%;
+        }
+        .image-container img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+        
+        h2{
+          
+          margin-bottom: 2%;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          background-color: whitesmoke;
+        }
+        .li{
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        #bp{
+          background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <h1>Asaad's</h1>
+          </div>
+          <ul>
+    
+            <li><a href="home.html">Home</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    <h1>"My Projects Portfolio"</h1>
+    <div class="image-container">
+      <img src="pro2.jfif" alt="project">
+        <p class="pp">Welcome to my projects portfolio! Here, you will find a collection of projects that I have developed using various programming languages and technologies. Each project demonstrates my skills in web development, problem-solving, and creativity. I am passionate about coding and continuously strive to learn and improve. Below, you will find a list of the primary languages I used in my projects, followed by detailed descriptions of each project.</p>
+        <img src="pro1.jfif" alt="project">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>"Project Sections"</h1>
+    <br>
+    <h2 id="bp">Project 1: [to do list app]</h2>
+    <br>
+    <p class="pp">This project is a simple command-line To-Do List application in Python. It allows users to add, delete, show, mark as completed, and edit tasks through a menu-driven interface. Users can input their choices, and the program performs the corresponding actions while validating inputs. The application runs continuously until the user decides to exit, providing an efficient way to manage tasks interactively.</p>
+    <br>
+    <h2>Technologies Used:</h2>
+    <ul>
+      <li class="li">python</li>
+    </ul>
+    <br>
+    <h2>Project's Link:</h2>
+    <a href="#">Click Here</a>
+    <br>
+    <br>
+    <h2 id="bp">Project 2: [pixel art]</h2>
+    <br>
+    <p class="pp">This Pixel Art project is a fun and creative way to explore digital art . It allows users to create and manipulate pixel art images, providing an engaging platform for both beginners and experienced artists.</p>
+    <br>
+    <h2>Technologies Used:</h2>
+    <ul>
+      <li class="li">html</li>
+      <li class="li">css</li>
+      <li class="li">javascript</li>
+    </ul>
+    <br>
+    <h2>Project's Link:</h2>
+    <a href="https://github.com/NadaAlAsaad/Pixel-art">Click Here</a>
+    <br>
+    <br>
+    <h2 id="bp">Project 3: [Florosa]</h2>
+    <br>
+    <p class="pp">Welcome to Florosa, your premier online floral destination for unique and meaningful bouquets that tell your story. At Florosa, we believe that every arrangement is an opportunity to create a memorable experience, and we are committed to providing our customers with the highest level of care and attention.</p>
+    <br>
+    <h2>Technologies Used:</h2>
+    <ul>
+      <li class="li">world press</li>
+    </ul>
+    <br>
+    <h2>Project's Link:</h2>
+    <a href="https://cook380.wordpress.com/?_gl=1*kjv3b6*_gcl_au*MjAyNzI3MjMxMi4xNzI2MDU0MjUw">Click Here</a>
+    <br>
+    <br>
+    <h2 id="bp">Project 4: [grid]</h2>
+    <br>
+    <p class="pp">This project uses Python's turtle module to create a 5x5 grid of randomly colored squares. A function called draw_square is defined to draw a square at specified coordinates with a random RGB fill color. The main loop iterates through rows and columns, calculating the positions for each square and calling the draw_square function. The result is a vibrant grid displayed in a turtle graphics window that remains open until closed manually.</p>
+    <br>
+    <h2>Technologies Used:</h2>
+    <ul>
+      <li class="li">python</li>
+    </ul>
+    <br>
+    <h2>Project's Link:</h2>
+    <a href="https://github.com/NadaAlAsaad/grid-">Click Here</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Nada Al Asaad. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function () {
+    
+          
+          loader.style.display = "none";
+    
+    
+          
+        })
+    
+      </script>
+</body>
+</html>

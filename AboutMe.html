@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>About Nada</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+         #preloader{
+            background: white url(preloader.gif) no-repeat center center;
+            Background-size: 70%;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+         }
+         .slideshow-container {
+    position: absolute;
+    max-width: 400px; 
+    margin: auto;
+    overflow: hidden;
+    right: 800px;
+    margin-bottom: 40%;
+    border-radius: 30%;
+}
+
+.slide {
+    display: none; 
+}
+
+.slide img {
+    width: 100%;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+
+.dot.active {
+    background-color: #717171;
+}
+        body {
+            color: #000000;
+            line-height: 1.6;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        .pp{
+            margin: 20px 0;
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: justify;
+        }
+        .pp2{
+            margin: 20px 0;
+            font-size: 1.2em;
+            max-width: 600px;
+            position: absolute;
+            text-align: justify;
+            z-index: 1;
+            left: 5.5%;
+            margin-left: 5%;
+            margin-top: 4%;
+            display: inline-block;
+        }
+        .pp3{
+            margin: 20px 0;
+            font-size: 1.2em;
+            max-width: 600px;
+            position: absolute;
+            text-align: justify;
+            z-index: 1;
+            
+            margin-left: 45%;
+            margin-top: 4%;}
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+        .img1{
+            right:5.5%;
+            position: absolute;
+            margin-bottom: 3%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .img1:hover{
+            transform: scale(1.3); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            margin: 0 10px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-top: 2%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        nav{
+            position: sticky;
+            background-color:  rgba(255, 255, 255, 0.5);
+            width: 100%;
+            padding: 10px 0;
+            z-index: 1000;
+            text-align: center;
+            top: 0;
+        }
+        nav .menu{
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .menu .logo h1{
+            text-decoration: none;
+            color: #000000;
+            font-size: 35px;
+            font-weight: 600;
+            font-family: fantasy;
+        }
+        .menu ul{
+            display: inline-flex;
+        }
+        .menu ul li{
+            list-style: none;
+            margin-left: 7px;
+        }
+        .menu ul li:first-child{
+            margin-left: 0px;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-family: fantasy;
+        }
+        .menu ul li a:hover{
+            background-color: antiquewhite;
+
+        }
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            left:15%;
+            position: absolute;
+        }
+        a{
+            text-decoration: none;
+        }
+        th, td {
+            border: 2px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: inline-flex;
+        }
+        .footer-links li {
+            margin: 0 15px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color:blue; 
+        }
+        footer p {
+            margin: 10px 0;
+            font-size: 0.9em;
+            color: #333;
+        }
+        .he1{
+            
+            margin-top: 4%;
+        }
+        .image-container img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+        .img2{
+            right:5.5%;
+            position: absolute;
+            margin-bottom: 3%;
+            right: 65%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .img2:hover{
+            transform: scale(1.3); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <h1>Asaad's</h1>
+          </div>
+          <ul>
+    
+            <li><a href="home.html">Home</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+    <h1>"About Me"</h1>
+    <div class="image-container">
+        <img src="me3.jfif" alt="Me">
+        <p class="pp">Hii ! My name is Nada Al Asaad, and I am a high school student and also i am a student at CodeBrave. I have a passion for learning and sharing knowledge, which drives me to explore various fields, especially in technology and the arts. I enjoy engaging with my community through volunteer work, where I teach and help others. My diverse interests and skills allow me to connect with people from different backgrounds and contribute positively to my surroundings.</p>
+        <img src="me2.jfif" alt="Me">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="pp2">"As I continue to cultivate my passions and skills, I have embarked on several exciting coding projects that reflect my commitment to learning and community engagement. Each project not only showcases my journey in technology and the arts but also highlights my desire to make a positive impact through coding. I invite you to explore my projects, where you can see how I apply my programming skills to tackle challenges."</p>
+    <img class="img1" src="me.jfif" alt="Me">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Skills&Hobbies</h1>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="hbo.jfif" alt="Image 1">
+        </div>
+        <div class="slide fade">
+            <img src="hdr.jfif" alt="Image 2">
+        </div>
+        <div class="slide fade">
+            <img src="drawing.jfif" alt="Image 4">
+        </div>
+        <div class="slide fade">
+            <img src="hab.jfif" alt="Image 5">
+        </div>
+        <div class="slide fade">
+            <img src="book.jfif" alt="Image 6">
+        </div>
+        <div class="slide fade">
+            <img src="art.jfif" alt="Image 7">
+        </div>
+        <div class="slide fade">
+            <img src="tea.jfif" alt="Image 8">
+        </div>
+        <div class="slide fade">
+            <img src="teac.jfif" alt="Image 9">
+        </div>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        </div>
+        </div>
+    </div>
+    <p class="pp3">One of my key skills is teaching, which allows me to share knowledge and inspire others. I enjoy breaking down complex concepts into easy-to-understand lessons, creating an engaging environment for my students. My drawing ability complements this by providing a visual way to convey ideas, making learning more enjoyable and memorable.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <br>
+    <br>
+    <p class="pp3">In my free time, I love indulging in hobbies like drawing, photography, and reading. Drawing lets me express my creativity, while photography captures beautiful moments and tells stories through images. Reading transports me to different worlds and broadens my perspective. Additionally, volunteering gives me a sense of fulfillment as I connect with my community and contribute to positive change.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="he1">More Information</h1>
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Mail</th>
+                <th>nadaalasaad2007@gmail.com</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>phone number</td>
+                <td>+96181087896</td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td><a href="https://www.facebook.com/share/1AM9M3ardk/">Nada AlAsaad</a></td>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+                <td><a href="https://www.instagram.com/nadaalasaadd/profilecard/?igsh=eW85b205bTBmN2My">nadaalasaadd</a></td>
+            </tr>
+            <tr>
+                <td>github</td>
+                <td><a href="https://github.com/NadaAlAsaad">NadaAlAsaad</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Nada Al Asaad. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+        var loader = document.getElementById("preloader");
+    
+        window.addEventListener("load", function () {
+    
+          
+          loader.style.display = "none";
+    
+    
+          
+        })
+        let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }    
+        
+        for (let j = 0; j < dots.length; j++) {
+            dots[j].className = dots[j].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";  
+        dots[slideIndex - 1].className += " active";
+        
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+      </script>
+</body>
+</html>
